@@ -2,15 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: visible;
 }
 
-//Basic styles
 html {
   font-size: 10px;
   font-family: $main-font;
   color: $text;
 }
 
+body {
+  overflow-x: hidden;
+}
 .container {
   width: 80vw;
   margin: auto;
@@ -22,7 +25,6 @@ li {
 
 a {
   text-decoration: none;
-  color: $text;
 }
 
 button {
@@ -44,6 +46,10 @@ button {
   top: 0;
   right: 0;
   z-index: 1;
+  @include respond(mobile) {
+    width: 100%;
+  }
+
   &__links {
     display: flex;
     justify-content: flex-end;
@@ -51,6 +57,11 @@ button {
     width: 50vw;
     height: 7rem;
     background: $grey;
+    @include respond(mobile) {
+      background: rgba($color: #b9b8ae, $alpha: 0.6);
+      width: 100%;
+      font-size: 1.8rem;
+    }
   }
   &__item {
     margin: 0 2rem;
@@ -60,6 +71,18 @@ button {
     }
     &:last-child {
       margin-right: 6rem;
+      @include respond(mobile) {
+        margin: 1rem;
+      }
+    }
+    @include respond(mobile) {
+      margin: 0 1rem;
+    }
+  }
+  &__link {
+    color: $text;
+    @include respond(mobile) {
+      font-weight: 600;
     }
   }
   &--shrink {
@@ -160,6 +183,10 @@ button {
 .header {
   background: $grey;
   display: flex;
+  flex-wrap: wrap;
+  @include respond(mobile) {
+    flex-direction: column;
+  }
 }
 
 .heading {
@@ -175,13 +202,24 @@ button {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  @include respond(mobile) {
+    @include container-mobile;
+    justify-content: initial;
+  }
   &__subtitle {
     animation: fadeUp 2s forwards;
     font-size: 2rem;
     font-style: italic;
+    @include respond(mobile) {
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
   }
   &__title {
     font-size: 3.8rem;
+    @include respond(mobile) {
+      font-size: 2.7rem;
+    }
   }
   &__name {
     font-style: italic;
@@ -219,11 +257,19 @@ button {
   top: 0;
   overflow: hidden;
   z-index: 5;
+  @include respond(mobile) {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
 }
 .slides {
   display: flex;
   height: 100%;
   width: 100%;
+  @include respond(mobile) {
+    height: 70vh;
+  }
 }
 .slide {
   min-width: 100%;
@@ -260,12 +306,18 @@ button {
     width: 35rem;
     height: 100%;
     margin: auto;
+    @include respond(mobile) {
+      width: auto;
+    }
   }
   .gallery-img {
     width: 100%;
     display: block;
     opacity: 1;
     object-fit: cover;
+  }
+  @include respond(mobile) {
+    overflow: hidden;
   }
 }
 
@@ -327,6 +379,7 @@ button {
     width: 35rem;
     justify-content: flex-end;
     transform: translateY(0);
+    transition: transform 0.5s ease;
   }
 
   .overlay__close,
