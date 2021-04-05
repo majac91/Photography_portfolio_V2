@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: visible;
 }
 
 html {
@@ -12,8 +11,9 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
+
 .container {
   width: 80vw;
   margin: auto;
@@ -25,6 +25,7 @@ li {
 
 a {
   text-decoration: none;
+  color: $text;
 }
 
 button {
@@ -80,7 +81,6 @@ button {
     }
   }
   &__link {
-    color: $text;
     @include respond(mobile) {
       font-weight: 600;
     }
@@ -126,12 +126,14 @@ button {
 //Form
 .add-photo-form {
   &--closed {
-    visibility: hidden;
+    // visibility: hidden;
     height: 0;
     width: 0;
+    display: none;
   }
   &--open {
-    visibility: visible;
+    // visibility: visible;
+    display: block;
     background: darken($color: $grey, $amount: 5%);
     z-index: 1000;
     font-size: 1.9rem;
@@ -203,6 +205,7 @@ button {
   align-items: flex-start;
   justify-content: flex-end;
   @include respond(mobile) {
+    height: 40vh;
     @include container-mobile;
     justify-content: initial;
   }
@@ -218,17 +221,24 @@ button {
   &__title {
     font-size: 3.8rem;
     @include respond(mobile) {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
     }
   }
   &__name {
     font-style: italic;
     font-size: 3.5rem;
+    @include respond(mobile) {
+      font-size: 2.4rem;
+    }
   }
   &__scroll-label {
     // arrow
     font-size: 2rem;
     padding: 2rem 0;
+    @include respond(mobile) {
+      font-size: 1.6rem;
+      padding: 1rem 0;
+    }
   }
   &__scroll-btn {
     background: $grey;
@@ -268,7 +278,7 @@ button {
   height: 100%;
   width: 100%;
   @include respond(mobile) {
-    height: 70vh;
+    height: 65vh;
   }
 }
 .slide {
@@ -315,9 +325,6 @@ button {
     display: block;
     opacity: 1;
     object-fit: cover;
-  }
-  @include respond(mobile) {
-    overflow: hidden;
   }
 }
 
@@ -398,8 +405,6 @@ button {
     //unchecked
     position: relative;
     top: 1.5rem;
-    // width: 1.8rem;
-    // height: 1.8rem;
     border: 1px solid black;
     appearance: none;
     outline: 0;
@@ -473,6 +478,8 @@ button {
   display: flex;
   position: relative;
   top: -3rem;
+  padding-left: 1rem;
+
   .img__caption {
     font-family: $cursive;
     font-size: 1.8rem;
@@ -503,9 +510,17 @@ button {
   &__social {
     margin-right: 4rem;
     display: flex;
+    // @include respond(mobile) {
+    //   margin-right: 0;
+    //   margin-left: 4rem;
+    // }
   }
   &__social-link {
     margin-left: 2rem;
+  }
+  @include respond(mobile) {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
