@@ -1,5 +1,5 @@
 import React, { useState, createRef } from "react";
-import closebtn from "../icons/png/001-cancel-3.png";
+import closebtn from "../../icons/png/001-cancel-3.png";
 import Parse from "parse";
 
 export default function Form({ isFormOpen, onCloseForm, onSubmitForm }) {

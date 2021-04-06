@@ -1,0 +1,216 @@
+.gallery {
+  .gallery-img__container {
+    width: 35rem;
+    height: 100%;
+    margin: auto;
+    @include respond(mobile) {
+      width: auto;
+    }
+  }
+  .gallery-img {
+    width: 100%;
+    display: block;
+    opacity: 1;
+    object-fit: cover;
+  }
+}
+
+//initially hidden
+.gallery__edit-btn {
+  display: none;
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  top: -10.5rem;
+  right: 1rem;
+  float: right;
+  &-img {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+  &:hover {
+    display: block;
+    background-color: transparentize($color: white, $amount: 0.3);
+    border-radius: 50%;
+  }
+}
+
+//displayed on img hover
+.gallery-img:hover ~ .gallery__edit-btn {
+  display: block;
+  background-color: transparentize($color: white, $amount: 0.3);
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  animation: fadeIn 0.5s forwards;
+}
+
+// Closed overlay
+.gallery-img__overlay {
+  position: relative;
+  left: 0rem;
+  top: -5rem;
+  opacity: 0;
+  height: 5rem;
+  transform: translateY(4rem);
+  transition: transform 0.5s ease;
+}
+
+.overlay__close .overlay__btn {
+  width: 0;
+  height: 0;
+}
+
+// Open overlay
+.edit__active {
+  //container
+  .gallery-img__overlay {
+    display: flex;
+    flex-direction: row;
+    background-color: transparentize($color: white, $amount: 0.3);
+    opacity: 1;
+    height: 5rem;
+    width: 35rem;
+    justify-content: flex-end;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+  }
+
+  .overlay__close,
+  .overlay__delete,
+  .overlay__checkbox {
+    background-color: transparent;
+  }
+
+  .overlay__btn {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin: 0 1.5rem;
+  }
+
+  .overlay__checkbox {
+    //unchecked
+    position: relative;
+    top: 1.5rem;
+    border: 1px solid black;
+    appearance: none;
+    outline: 0;
+    cursor: pointer;
+    //checked
+    &::before {
+      position: absolute;
+      top: -0.4rem;
+      color: black;
+      content: "";
+      display: block;
+      width: 1rem;
+      height: 2rem;
+      border-style: solid;
+      border-color: black;
+      border-width: 0 1px 1px 0;
+      transform: rotate(45deg);
+      opacity: 0;
+    }
+    &:checked {
+      border: black;
+      // show the checked btn
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+.gallery-img:hover ~ .gallery__edit-btn ~ img {
+  display: block;
+}
+
+.edit__active .gallery__edit-btn,
+.edit__active:hover .gallery__edit-btn {
+  display: none;
+}
+
+.edit__active .edit__btn-visible {
+  opacity: 0;
+}
+
+.edit__btn-visible {
+  opacity: 1;
+}
+
+//Switching lists on click
+.gallery figure.home,
+.gallery figure.places {
+  display: block;
+}
+
+.gallery.home figure.home {
+  display: block;
+}
+
+.gallery.home figure.places {
+  display: none;
+}
+
+.gallery.places figure.places {
+  display: block;
+}
+
+.gallery.places figure.home {
+  display: none;
+}
+
+//img captions
+.caption__container {
+  line-height: 1.5;
+  display: flex;
+  position: relative;
+  top: -3rem;
+  padding-left: 1rem;
+
+  .img__caption {
+    font-family: $cursive;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+  .img__date {
+    font-weight: 300;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+//animations
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(1rem);
+  }
+  100% {
+    // opacity: 1;
+    transform: translateY(0);
+  }
+  0% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

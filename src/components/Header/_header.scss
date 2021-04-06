@@ -1,0 +1,75 @@
+.header {
+  background: $grey;
+  display: flex;
+  flex-wrap: wrap;
+  @include respond(mobile) {
+    flex-direction: column;
+  }
+}
+
+.heading {
+  opacity: 0;
+  animation: fadeUp 5s forwards;
+  z-index: 2;
+  display: flex;
+  margin: auto;
+  height: 70vh;
+  width: 40vw;
+  font-family: $header-font;
+  font-weight: 100;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  @include respond(mobile) {
+    height: 40vh;
+    @include container-mobile;
+    justify-content: initial;
+  }
+  &__subtitle {
+    animation: fadeUp 2s forwards;
+    font-size: 2rem;
+    font-style: italic;
+    @include respond(mobile) {
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+  }
+  &__title {
+    font-size: 3.8rem;
+    @include respond(mobile) {
+      font-size: 2.5rem;
+    }
+  }
+  &__name {
+    font-style: italic;
+    font-size: 3.5rem;
+    @include respond(mobile) {
+      font-size: 2.4rem;
+    }
+  }
+  &__scroll-label {
+    // arrow
+    font-size: 2rem;
+    padding: 2rem 0;
+    @include respond(mobile) {
+      font-size: 1.6rem;
+      padding: 1rem 0;
+    }
+  }
+  &__scroll-btn {
+    background: $grey;
+  }
+  &__scroll-icon {
+    animation: pulse 2s infinite;
+  }
+}
+
+.heading--visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

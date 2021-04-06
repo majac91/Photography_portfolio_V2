@@ -1,0 +1,28 @@
+.footer {
+  background: $grey;
+  height: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  line-height: 2;
+  font-family: $header-font;
+  &__copyright {
+    margin-left: 4rem;
+  }
+  &__social {
+    margin-right: 4rem;
+    display: flex;
+    // @include respond(mobile) {
+    //   margin-right: 0;
+    //   margin-left: 4rem;
+    // }
+  }
+  &__social-link {
+    margin-left: 2rem;
+  }
+  @include respond(mobile) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

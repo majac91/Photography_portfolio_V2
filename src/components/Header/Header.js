@@ -1,7 +1,7 @@
 import React from "react";
-import scrollbtn from "../icons/png/next.png";
+import scrollbtn from "../../icons/png/next.png";
 
-export default function Heading() {
+export default function Header() {
   return (
     <section className="heading">
       <h1 className="heading--visually-hidden">

@@ -1,0 +1,50 @@
+.container--slideshow {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 5;
+  @include respond(mobile) {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+.slides {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  @include respond(mobile) {
+    height: 65vh;
+  }
+}
+.slide {
+  min-width: 100%;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide-controls {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .next-btn,
+  .prev-btn {
+    cursor: pointer;
+    background: transparent;
+    height: 100%;
+    width: 50%;
+  }
+}

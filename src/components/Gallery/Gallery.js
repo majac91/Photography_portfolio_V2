@@ -7,13 +7,13 @@ import {
   TumblrShareButton,
 } from "react-share";
 
-import closebtn from "../icons/png/001-cancel-3.png";
-import deletebtn from "../icons/png/delete.png";
-import editbtn from "../icons/png/edit1.png";
-import facebookbtn from "../icons/png/facebook.png";
-import twitterbtn from "../icons/png/twitter.png";
-import pinterestbtn from "../icons/png/pinterest.png";
-import tumblrbtn from "../icons/png/tumblr.png";
+import closebtn from "../../icons/png/001-cancel-3.png";
+import deletebtn from "../../icons/png/delete.png";
+import editbtn from "../../icons/png/edit1.png";
+import facebookbtn from "../../icons/png/facebook.png";
+import twitterbtn from "../../icons/png/twitter.png";
+import pinterestbtn from "../../icons/png/pinterest.png";
+import tumblrbtn from "../../icons/png/tumblr.png";
 
 export default function Gallery({ galleryList, onDeleteItem }) {
   const [activeItemId, setActiveItemId] = useState();

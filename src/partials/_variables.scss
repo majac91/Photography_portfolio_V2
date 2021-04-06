@@ -3,22 +3,3 @@ $text: black;
 $cursive: "bimboballpoint", sans-serif;
 $main-font: "TwCenW01-Medium", sans-serif;
 $header-font: "IBM Plex Serif";
-
-@mixin container-mobile {
-  width: 90vw;
-  margin: auto;
-}
-
-@mixin respond($breakpoint) {
-  @if $breakpoint==tablet {
-    @media only screen and (max-width: 600px) {
-      @content;
-    }
-  }
-
-  @if $breakpoint==mobile {
-    @media only screen and (max-width: 480px) {
-      @content;
-    }
-  }
-}

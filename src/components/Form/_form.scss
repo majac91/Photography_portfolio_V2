@@ -1,0 +1,58 @@
+.add-photo-form {
+  &--closed {
+    // visibility: hidden;
+    height: 0;
+    width: 0;
+    display: none;
+  }
+  &--open {
+    // visibility: visible;
+    display: block;
+    background: darken($color: $grey, $amount: 5%);
+    z-index: 1000;
+    font-size: 1.9rem;
+    position: fixed;
+    top: 20vh;
+    bottom: 20vh;
+    left: 30vw;
+    right: 30vw;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .form__input {
+      border: none;
+      padding: 0.5rem;
+    }
+    .form__input-img {
+      width: 20rem;
+    }
+    .form__label,
+    .form__radio-btns,
+    .form__submit-btn {
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .form__submit-btn {
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 1rem 2.5rem;
+      font-size: 1.5rem;
+      background: darken($color: $grey, $amount: 10%);
+    }
+    .form__close-btn {
+      background: darken($color: $grey, $amount: 5%);
+    }
+    .form__close-btn > img {
+      position: relative;
+      left: 20rem;
+      bottom: 38rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+// Gallery

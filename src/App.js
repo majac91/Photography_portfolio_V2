@@ -4,13 +4,13 @@ import Parse from "parse";
 import { mscConfirm } from "medium-style-confirm";
 import "medium-style-confirm/css/msc-style.css";
 
-import Navbar from "./components/Navbar.js";
-import Carousel from "./components/Carousel.js";
-import Heading from "./components/Heading.js";
-import GalleryDisplayButtons from "./components/GalleryDisplayButtons.js";
-import Form from "./components/Form.js";
-import Gallery from "./components/Gallery";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar.js";
+import Carousel from "./components/Slider/Slider.js";
+import Heading from "./components/Header/Header.js";
+import GalleryDisplayButtons from "./components/GalleryDisplayBtns/GalleryDisplayButtons.js";
+import Form from "./components/Form/Form.js";
+import Gallery from "./components/Gallery/Gallery";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -79,7 +79,7 @@ function App() {
     if (
       mscConfirm("Delete photo?", async function () {
         try {
-          const object = await deleteQuery[0].destroy();
+          await deleteQuery[0].destroy();
           console.log("The object was deleted successfully.");
         } catch (e) {
           console.log("Delete failed!", e);

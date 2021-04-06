@@ -1,0 +1,55 @@
+.navbar {
+  width: 50.03vw;
+  font-size: 2.1rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  transition: all 0.4s ease;
+  font-family: $header-font;
+  font-style: normal;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  @include respond(mobile) {
+    width: 100%;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50vw;
+    height: 7rem;
+    background: $grey;
+    @include respond(mobile) {
+      background: rgba($color: #b9b8ae, $alpha: 0.6);
+      width: 100%;
+      font-size: 1.8rem;
+    }
+  }
+  &__item {
+    margin: 0 2rem;
+    &:nth-of-type(1) {
+      //'Hey'
+      font-style: italic;
+    }
+    &:last-child {
+      margin-right: 6rem;
+      @include respond(mobile) {
+        margin: 1rem;
+      }
+    }
+    @include respond(mobile) {
+      margin: 0 1rem;
+    }
+  }
+  &__link {
+    @include respond(mobile) {
+      font-weight: 600;
+    }
+  }
+  &--shrink {
+    font-size: 1.2rem;
+    height: 8rem;
+  }
+}

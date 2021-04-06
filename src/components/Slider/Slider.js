@@ -6,12 +6,12 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
-import firstSlide from "../images/photo0.jpg";
-import secondSlide from "../images/photo1.jpg";
-import thirdSlide from "../images/photo8.jpg";
-import fourthSlide from "../images/photo25.jpg";
+import firstSlide from "../../images/photo0.jpg";
+import secondSlide from "../../images/photo1.jpg";
+import thirdSlide from "../../images/photo8.jpg";
+import fourthSlide from "../../images/photo25.jpg";
 
-export default function Carousel(props) {
+export default function Slider() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [slideWidth, setSlideWidth] = useState(0);
   const skipTransition = useRef(false);

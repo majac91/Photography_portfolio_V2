@@ -1,5 +1,5 @@
 import React from "react";
-import addbtn from "../icons/png/016-add.png";
+import addbtn from "../../icons/png/016-add.png";
 
 export default function GalleryDisplayButtons({ onBtnClick, onOpenForm }) {
   return (
