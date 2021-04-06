@@ -20,7 +20,6 @@
     align-items: center;
     width: 50vw;
     height: 7rem;
-    background: $grey;
     @include respond(mobile) {
       background: rgba($color: #b9b8ae, $alpha: 0.6);
       width: 100%;

@@ -1,16 +1,20 @@
 import "./App.scss";
 import React, { useEffect, useLayoutEffect, useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Parse from "parse";
 import { mscConfirm } from "medium-style-confirm";
 import "medium-style-confirm/css/msc-style.css";
 
 import Navbar from "./components/Navbar/Navbar.js";
 import Carousel from "./components/Slider/Slider.js";
-import Heading from "./components/Header/Header.js";
+import HeaderMain from "./components/HeaderMain/HeaderMain.js";
 import GalleryDisplayButtons from "./components/GalleryDisplayBtns/GalleryDisplayButtons.js";
 import Form from "./components/Form/Form.js";
 import Gallery from "./components/Gallery/Gallery";
 import Footer from "./components/Footer/Footer";
+
+import HeaderAbout from "./components/HeaderAbout/HeaderAbout";
 
 function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -91,27 +95,40 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <header className="header">
-        <Carousel />
-        <Heading />
-      </header>
-      <GalleryDisplayButtons
-        onBtnClick={handlDisplayCategory}
-        onOpenForm={handleFormOpen}
-        isFormOpen={isFormOpen}
-      />
-      <Form
-        onSubmitForm={handleFormSubmit}
-        onCloseForm={handleFormOpen}
-        isFormOpen={isFormOpen}
-        itemAdded={itemAdded}
-        setItemAdded={setItemAdded}
-      />
-      <main className={`gallery container ${viewCategory}`} id="gallery">
-        <Gallery galleryList={galleryList} onDeleteItem={handleDeleteItem} />
-      </main>
-      <Footer />
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <header className="header">
+              <Carousel />
+              <HeaderMain />
+            </header>
+            <GalleryDisplayButtons
+              onBtnClick={handlDisplayCategory}
+              onOpenForm={handleFormOpen}
+              isFormOpen={isFormOpen}
+            />
+            <Form
+              onSubmitForm={handleFormSubmit}
+              onCloseForm={handleFormOpen}
+              isFormOpen={isFormOpen}
+              itemAdded={itemAdded}
+              setItemAdded={setItemAdded}
+            />
+            <main className={`gallery container ${viewCategory}`} id="gallery">
+              <Gallery
+                galleryList={galleryList}
+                onDeleteItem={handleDeleteItem}
+              />
+            </main>
+          </Route>
+          <Route exact path="/about">
+            <HeaderAbout></HeaderAbout>
+          </Route>
+        </Switch>
+
+        <Footer />
+      </Router>
     </>
   );
 }
