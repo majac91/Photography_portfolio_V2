@@ -6,8 +6,8 @@ const Card = ({ photoOnSide, img, className, subheading, heading, copy }) => {
       {photoOnSide === "right" && (
         <div className={`card card__img-right container ${className}`}>
           <div className="card__text">
-            <p>{subheading}</p>
-            <h2>{heading}</h2>
+            <p className="card__text-subheading">{subheading}</p>
+            <h2 className="card__text-heading">{heading}</h2>
           </div>
           <div className="card__img-container">
             <img alt="" className="card__img" src={img} />
@@ -17,14 +17,14 @@ const Card = ({ photoOnSide, img, className, subheading, heading, copy }) => {
       )}
 
       {photoOnSide === "left" && (
-        <div className={`card card__img-right container ${className}`}>
+        <div className={`card card__img-left container ${className}`}>
           <div className="card__img-container">
             <img alt="" className="card__img" src={img} />
             <small className="card__credits">{copy}</small>
           </div>
           <div className="card__text">
-            <p>{subheading}</p>
-            <h2>{heading}</h2>
+            <p className="card__text-subheading">{subheading}</p>
+            <h2 className="card__text-heading">{heading}</h2>
           </div>
         </div>
       )}

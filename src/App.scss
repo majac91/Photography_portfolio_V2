@@ -8,5 +8,6 @@
 @import "./components/GalleryDisplayBtns/gallery-btns";
 @import "./components/Footer/footer";
 @import "./components/Slider/slider";
-@import "./components/HeaderAbout/header-about";
+@import "../src/pages/AboutPage/header-about";
+@import "../src/pages/AboutPage/about";
 @import "./components/Card/card";

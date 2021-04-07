@@ -1,5 +1,5 @@
-.about {
-  background: url("../../images/about@2x.jpg");
+.header-about {
+  background: url("../../images/DSC_0180jhbjh.jpg");
   background-size: cover;
   background-position-y: bottom;
   width: 100%;
@@ -7,11 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include respond(mobile) {
-    background: url("../../images/about.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+  // @include respond(mobile) {
+  //   background: url("../../images/about.jpg");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  // }
   &__heading {
     font-family: "IBM Plex Serif";
     font-weight: 500;
