@@ -9,7 +9,6 @@
 
 .heading {
   opacity: 0;
-  animation: fadeUp 5s forwards;
   z-index: 2;
   display: flex;
   margin: auto;
@@ -20,6 +19,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+  @include fadeUp;
   @include respond(mobile) {
     height: 40vh;
     @include container-mobile;

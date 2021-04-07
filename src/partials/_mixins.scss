@@ -3,6 +3,10 @@
   margin: auto;
 }
 
+@mixin fadeUp {
+  animation: fadeUp 5s forwards;
+}
+
 @mixin respond($breakpoint) {
   @if $breakpoint==tablet {
     @media only screen and (max-width: 600px) {

@@ -12,9 +12,16 @@ import HeaderMain from "./components/HeaderMain/HeaderMain.js";
 import GalleryDisplayButtons from "./components/GalleryDisplayBtns/GalleryDisplayButtons.js";
 import Form from "./components/Form/Form.js";
 import Gallery from "./components/Gallery/Gallery";
+import Card from "./components/Card/Card";
 import Footer from "./components/Footer/Footer";
 
 import HeaderAbout from "./components/HeaderAbout/HeaderAbout";
+
+import card1 from "./images/card1.jpg";
+import card2 from "./images/Screenshot 2021-04-07 at 10.26.26.png";
+import card3 from "./images/Screenshot 2021-04-07 at 10.26.39.png";
+import card4 from "./images/Screenshot 2021-04-07 at 10.26.45.png";
+import card5 from "./images/Screenshot 2021-04-07 at 10.26.51.png";
 
 function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -123,7 +130,52 @@ function App() {
             </main>
           </Route>
           <Route exact path="/about">
-            <HeaderAbout></HeaderAbout>
+            <HeaderAbout />
+            <Card
+              photoOnSide="right"
+              img={card1}
+              className={"card1"}
+              subheading="01 — William Eggleston"
+              heading="The father of colour photography."
+              copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
+              York/London."
+            />
+            <Card
+              photoOnSide="left"
+              img={card2}
+              className={"card2"}
+              subheading="02 — William Eggleston"
+              heading="The father of colour photography."
+              copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
+              York/London."
+            />
+            <Card
+              photoOnSide="right"
+              img={card3}
+              className={"card3"}
+              subheading="03 — William Eggleston"
+              heading="The father of colour photography."
+              copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
+              York/London."
+            />
+            <Card
+              photoOnSide="left"
+              img={card4}
+              className={"card4"}
+              subheading="04 — William Eggleston"
+              heading="The father of colour photography."
+              copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
+              York/London."
+            />
+            <Card
+              photoOnSide="right"
+              img={card5}
+              className={"card3"}
+              subheading="03 — William Eggleston"
+              heading="The father of colour photography."
+              copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
+              York/London."
+            />
           </Route>
         </Switch>
 

@@ -5,11 +5,11 @@ import Parse from "parse";
 export default function Form({ isFormOpen, onCloseForm, onSubmitForm }) {
   const [caption, setCaption] = useState("caption");
   const [date, setDate] = useState("date");
-  const [url, setUrl] = useState();
+  // const [url, setUrl] = useState();
   const [location, setLocation] = useState();
   const fileInput = createRef();
 
-  const handleFileInput = (e) => setUrl(fileInput.current); //TODO fix photo path
+  // const handleFileInput = (e) => setUrl(fileInput.current);
   const handleCaptionInput = (e) => setCaption(e.target.value);
   const handleDateInput = (e) => setDate(e.target.value);
 

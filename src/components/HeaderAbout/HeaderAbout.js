@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../../images/about@2x.jpg";
 
 const HeaderAbout = () => {
   return (
