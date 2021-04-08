@@ -4,7 +4,15 @@
 }
 
 @mixin fadeUp {
-  animation: fadeUp 5s forwards;
+  animation: fadeUp 2s forwards;
+}
+
+@mixin fadeIn {
+  animation: fadeIn 2s forwards;
+}
+
+@mixin scale {
+  animation: scale 2s forwards;
 }
 
 @mixin respond($breakpoint) {

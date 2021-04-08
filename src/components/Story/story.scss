@@ -1,0 +1,54 @@
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  &__link {
+    width: 100%;
+  }
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img {
+    @include fadeIn;
+  }
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+    font-family: $header-font;
+    font-style: italic;
+    font-size: 2rem;
+  }
+}
+
+.copenhagen {
+  .story__link {
+    background: black;
+    height: 95%;
+  }
+  .story__inner {
+    color: white;
+    font-family: $header-font;
+  }
+  .story__img {
+    width: 90%;
+    height: auto;
+    margin: 1rem 2rem 2rem 2rem;
+  }
+  .story__subtitle {
+    margin-top: auto;
+    margin-left: 2rem;
+    align-self: flex-start;
+  }
+}
+
+.heading-xl {
+  font-size: 5rem;
+  text-transform: uppercase;
+}

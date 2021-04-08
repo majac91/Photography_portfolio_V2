@@ -1,0 +1,50 @@
+.stories {
+  background: rgb(218, 217, 204);
+  height: 100%;
+  font-family: $header-font;
+
+  &__heading {
+    height: 40vh;
+
+    &-inner {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      @include fadeUp;
+    }
+    &-title {
+      font-size: 2rem;
+    }
+    &-subtitle {
+      font-size: 2.5rem;
+      font-style: italic;
+      width: 30%;
+      text-align: center;
+      padding-top: 1.5rem;
+    }
+  }
+  &__main {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    @include respond(mobile) {
+      flex-direction: column;
+    }
+  }
+  &__card {
+    max-width: 90%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin: 3rem auto;
+  }
+  &__main-footer {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 15rem 0;
+  }
+}

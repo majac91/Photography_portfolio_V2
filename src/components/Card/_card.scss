@@ -19,7 +19,7 @@
 
 .card {
   display: flex;
-  height: 60vh;
+  height: 70vh;
   padding-bottom: 3rem;
   @include respond(mobile) {
     flex-direction: column;

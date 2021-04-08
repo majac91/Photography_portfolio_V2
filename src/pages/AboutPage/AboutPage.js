@@ -54,6 +54,12 @@ const AboutPage = () => {
           </div>
         </section>
         <section className="inspiration">
+          <div className="inspiration__heading">
+            <h2 className="inspiration__heading-title">Inspiration</h2>
+            <h3 className="inspiration__heading-subtitle">
+              Some of the photographers I admire
+            </h3>
+          </div>
           <Card
             photoOnSide="right"
             img={card1}
@@ -100,6 +106,7 @@ const AboutPage = () => {
               York/London."
           />
         </section>
+        <section className="authors"></section>
       </main>
     </>
   );

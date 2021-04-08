@@ -43,9 +43,11 @@
     }
   }
   &__link {
-    @include respond(mobile) {
-      font-weight: 600;
-    }
+    font-weight: 600;
+
+    // @include respond(mobile) {
+    //   font-weight: 600;
+    // }
   }
   &--shrink {
     font-size: 1.2rem;

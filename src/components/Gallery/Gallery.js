@@ -27,7 +27,7 @@ export default function Gallery({ galleryList, onDeleteItem }) {
   }
 
   return (
-    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 892: 2, 1515: 3 }}>
+    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 892: 3, 1515: 4 }}>
       <Masonry>
         {galleryList.map((el) => {
           return (
