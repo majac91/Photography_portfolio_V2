@@ -1,4 +1,5 @@
 import "./App.scss";
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -6,27 +7,33 @@ import Footer from "./components/Footer/Footer";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import MainPage from "./pages/MainPage/MainPage";
 import StoriesPage from "./pages/StoriesPage/StoriesPage";
+import StoryPage1 from "./pages/StoryPage1/Story1";
 
 function App() {
+  const [containerClass, setContainerClass] = useState(null);
+
   return (
-    <>
+    <div className={containerClass}>
       <Router>
         <Navbar />
         <Switch>
           <Route exact path="/">
-            <MainPage />
+            <MainPage setContainerClass={setContainerClass} />
           </Route>
           <Route exact path="/about">
-            <AboutPage />
+            <AboutPage setContainerClass={setContainerClass} />
           </Route>
           <Route exact path="/stories">
-            <StoriesPage />
+            <StoriesPage setContainerClass={setContainerClass} />
+          </Route>
+          <Route exact path="/copenhagen">
+            <StoryPage1 setContainerClass={setContainerClass} />
           </Route>
         </Switch>
 
         <Footer />
       </Router>
-    </>
+    </div>
   );
 }
 

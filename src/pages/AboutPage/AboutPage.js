@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../../components/Card/Card";
 
 import about from "../../images/about-me.jpg";
@@ -8,7 +8,10 @@ import card3 from "../../images/Screenshot 2021-04-07 at 10.26.39.png";
 import card4 from "../../images/Screenshot 2021-04-07 at 10.26.45.png";
 import card5 from "../../images/Screenshot 2021-04-07 at 10.26.51.png";
 
-const AboutPage = () => {
+const AboutPage = ({ setContainerClass }) => {
+  useEffect(() => {
+    setContainerClass("aboutPage");
+  }, []);
   return (
     <>
       <header className="header-about">

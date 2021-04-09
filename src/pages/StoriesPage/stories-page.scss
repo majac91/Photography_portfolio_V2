@@ -1,7 +1,6 @@
 .stories {
   background: rgb(218, 217, 204);
   height: 100%;
-  font-family: $header-font;
 
   &__heading {
     height: 40vh;
@@ -35,7 +34,7 @@
   }
   &__card {
     max-width: 90%;
-    height: 80vh;
+    max-height: auto;
     display: flex;
     justify-content: space-between;
     margin: auto;

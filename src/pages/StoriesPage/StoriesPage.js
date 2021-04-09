@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Story from "../../components/Story/Story";
 import copenhagen from "../../images/DSC_0474.jpg";
 
-const StoriesPage = () => {
+const StoriesPage = ({ setContainerClass }) => {
+  useEffect(() => {
+    setContainerClass("storiesPage");
+  }, []);
+
   return (
     <div className="stories">
-      <div className="stories__heading">
+      <header className="stories__heading">
         <div className="stories__heading-inner">
           <h1 className="stories__heading-title">STORIES</h1>
           <h2 className="stories__heading-subtitle">
             A journal to share some trips in detail & other creations
           </h2>
         </div>
-      </div>
+      </header>
       <main className="container">
         <section className="stories__main">
           <div className="col">

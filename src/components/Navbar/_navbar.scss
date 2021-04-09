@@ -4,7 +4,7 @@
   letter-spacing: 2px;
   line-height: 1.2;
   transition: all 0.4s ease;
-  font-family: $header-font;
+  font-family: $font-main;
   font-style: normal;
   position: absolute;
   top: 0;
@@ -20,6 +20,7 @@
     align-items: center;
     width: 50vw;
     height: 7rem;
+
     @include respond(mobile) {
       background: rgba($color: #b9b8ae, $alpha: 0.6);
       width: 100%;
@@ -52,5 +53,13 @@
   &--shrink {
     font-size: 1.2rem;
     height: 8rem;
+  }
+}
+
+.story1Page {
+  color: white;
+
+  .navbar__link {
+    color: white;
   }
 }

@@ -7,9 +7,12 @@ const Story = ({ className, src }) => {
       <Link to={`/${className}`} className={"story__link"}>
         {className === "copenhagen" && (
           <div className="story__inner">
-            <h2 className="story__title heading-xl">Copenhagen</h2>
-            <h3 className="story__subtitle">Denmark</h3>
-            <img className="story__img" src={src} alt="copenhagen" />
+            <h2 className="story__inner-title heading-xl">Botanisk</h2>
+            <div className="story__inner-subtitle">
+              <h3>Copenhagen</h3>
+              <h3>Denmark</h3>
+            </div>
+            <img className="story__inner-img" src={src} alt="copenhagen" />
           </div>
         )}
       </Link>

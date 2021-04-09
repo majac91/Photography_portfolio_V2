@@ -9,7 +9,7 @@ import GalleryDisplayButtons from "../../components/GalleryDisplayBtns/GalleryDi
 import Form from "../../components/Form/Form";
 import Gallery from "../../components/Gallery/Gallery";
 
-const MainPage = () => {
+const MainPage = ({ setContainerClass }) => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [galleryList, setGalleryList] = useState([]);
   const [viewCategory, setViewCategory] = useState("all");
@@ -21,6 +21,10 @@ const MainPage = () => {
       "0ZzBp7Szs8vOyijUakZHud8WaxnT1taYtVKSJ6Ha"
     );
     Parse.serverURL = "https://parseapi.back4app.com/";
+  }, []);
+
+  useEffect(() => {
+    setContainerClass("mainPage");
   }, []);
 
   async function retreiveList() {

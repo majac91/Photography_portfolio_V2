@@ -4,6 +4,8 @@
   align-items: center;
   position: relative;
   width: 100%;
+  height: 70vh;
+
   &__link {
     width: 100%;
   }
@@ -13,15 +15,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    &-subtitle {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: auto;
+      padding-bottom: 0.5rem;
+    }
+    &-img {
+      @include fadeIn;
+    }
   }
-  &__img {
-    @include fadeIn;
-  }
+
   &__btn {
     position: absolute;
     bottom: 0;
     background: transparent;
-    font-family: $header-font;
+    font-family: $font-main;
     font-style: italic;
     font-size: 2rem;
   }
@@ -34,21 +45,18 @@
   }
   .story__inner {
     color: white;
-    font-family: $header-font;
-  }
-  .story__img {
-    width: 90%;
-    height: auto;
-    margin: 1rem 2rem 2rem 2rem;
-  }
-  .story__subtitle {
-    margin-top: auto;
-    margin-left: 2rem;
-    align-self: flex-start;
+    &-img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
 .heading-xl {
-  font-size: 5rem;
+  font-size: 8rem;
   text-transform: uppercase;
+  font-weight: 600;
+  @include respond(mobile) {
+    font-size: 4rem;
+  }
 }

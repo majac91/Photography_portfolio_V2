@@ -16,6 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-main;
 }
 
 html {
@@ -49,6 +50,14 @@ button {
 }
 
 //flex
+.d-flex {
+  display: flex;
+}
+
+.center-x {
+  justify-content: center;
+}
+
 .row {
   display: flex;
   flex-direction: row;

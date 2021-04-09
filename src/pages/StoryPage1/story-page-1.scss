@@ -1,0 +1,49 @@
+.story1 {
+  background: black;
+  height: 100%;
+  font-family: $font-main;
+  &__heading {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 5rem;
+    @include fadeUp;
+    &-inner {
+      margin: auto;
+    }
+    &-title {
+      font-size: 10rem;
+    }
+  }
+
+  &__img {
+    width: auto;
+    max-height: 90vh;
+    margin: 5rem 0;
+
+    @include respond(mobile) {
+      width: 100%;
+      height: auto;
+    }
+
+    &-img1 {
+      height: 70vh;
+      @include respond(mobile) {
+        height: auto;
+      }
+    }
+    &-img2 {
+      margin-left: auto;
+      margin-right: 10%;
+    }
+    &-img3,
+    &-img4 {
+      margin: 2rem;
+    }
+    &-img5 {
+    }
+  }
+}
