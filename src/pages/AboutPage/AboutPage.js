@@ -76,37 +76,33 @@ const AboutPage = ({ setContainerClass }) => {
             photoOnSide="left"
             img={card2}
             className={"card2"}
-            subheading="02 — William Eggleston"
-            heading="The father of colour photography."
-            copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
-              York/London."
+            subheading="02 — Alec Soth"
+            heading="On-the-road photography."
+            copy=" © Alec Sot. Mother and Daughter, 2005."
           />
           <Card
             photoOnSide="right"
             img={card3}
             className={"card3"}
-            subheading="03 — William Eggleston"
-            heading="The father of colour photography."
-            copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
-              York/London."
+            subheading="03 — Annie Leibovitz"
+            heading="The American portrait photographer."
+            copy=" © Annie Leibovitz. Miles Davis, New York City, July,1.1989."
           />
           <Card
             photoOnSide="left"
             img={card4}
             className={"card4"}
-            subheading="04 — William Eggleston"
-            heading="The father of colour photography."
-            copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
-              York/London."
+            subheading="04 — Joel Meyerowitz"
+            heading="Street -colour- photography."
+            copy=" © Joel Meyerowitz. Camel coat couple in street steam, New York City. 1975."
           />
           <Card
             photoOnSide="right"
             img={card5}
             className={"card5"}
-            subheading="03 — William Eggleston"
-            heading="The father of colour photography."
-            copy=" © Eggleston Artistic Trust. Courtesy David Zwirner, New
-              York/London."
+            subheading="05 — Harry Gruyaert"
+            heading="Shapes & light."
+            copy="© Harry Gruyaert. Launderette. Antwerpen,  Flanders, Belgium. 1988."
           />
         </section>
         <section className="authors"></section>

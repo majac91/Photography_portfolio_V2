@@ -3,6 +3,7 @@
     width: 35rem;
     height: 100%;
     margin: auto;
+    position: relative;
     @include respond(mobile) {
       width: auto;
     }
@@ -17,6 +18,14 @@
       margin: auto;
     }
   }
+}
+
+.gallery__view-btn {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
 }
 
 //initially hidden
@@ -40,7 +49,7 @@
 }
 
 //displayed on img hover
-.gallery-img:hover ~ .gallery__edit-btn {
+.gallery__view-btn:hover ~ .gallery__edit-btn {
   display: block;
   background-color: transparentize($color: white, $amount: 0.3);
   border-radius: 50%;

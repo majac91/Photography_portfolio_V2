@@ -1,6 +1,6 @@
 @import "./partials/variables";
-@import "./partials/global";
 @import "./partials/mixins";
+@import "./partials/global";
 @import "./components/Navbar/navbar";
 @import "./components/HeaderMain/header-main";
 @import "./components/Form/form";
@@ -11,6 +11,6 @@
 @import "../src/pages/AboutPage/about-header";
 @import "../src/pages/AboutPage/about-page";
 @import "../src/pages/StoriesPage/stories-page";
-@import "./components/Story/story";
+@import "./components/StoryCard/story-card";
 @import "../src/pages/StoryPage1/story-page-1";
 @import "./components/Card/card";

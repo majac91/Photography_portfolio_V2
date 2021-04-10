@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Story from "../../components/Story/Story";
+import StoryCard from "../../components/StoryCard/StoryCard";
 import copenhagen from "../../images/DSC_0474.jpg";
 
 const StoriesPage = ({ setContainerClass }) => {
@@ -21,27 +21,27 @@ const StoriesPage = ({ setContainerClass }) => {
         <section className="stories__main">
           <div className="col">
             <div className="stories__card row">
-              <Story
+              <StoryCard
                 className="copenhagen"
                 src={copenhagen}
                 h1={"Copenhagen"}
               />
             </div>
             <div className="stories__card row">
-              <Story className="" src={copenhagen} h1={"Copenhagen"} />
+              <StoryCard className="" src={copenhagen} h1={"Copenhagen"} />
             </div>
           </div>
           <div className="col">
             <div className="stories__card row">
-              <Story className="" src={copenhagen} h1={"Copenhagen"} />
+              <StoryCard className="" src={copenhagen} h1={"Copenhagen"} />
             </div>
             <div className="stories__card row">
-              <Story className="" src={copenhagen} h1={"Copenhagen"} />
+              <StoryCard className="" src={copenhagen} h1={"Copenhagen"} />
             </div>
           </div>
           <div className="col">
             <div className="stories__card row">
-              <Story className="" src={copenhagen} h1={"Copenhagen"} />
+              <StoryCard className="" src={copenhagen} h1={"Copenhagen"} />
             </div>
           </div>
         </section>

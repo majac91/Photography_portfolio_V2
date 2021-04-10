@@ -31,6 +31,9 @@
     @include respond(mobile) {
       flex-direction: column;
     }
+    @include respond(tablet) {
+      flex-direction: column;
+    }
   }
   &__card {
     max-width: 90%;
@@ -45,5 +48,73 @@
     text-align: center;
     font-size: 2rem;
     padding: 15rem 0;
+  }
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-width: 33vw;
+  height: 70vh;
+  @include respond(tablet) {
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50vh;
+  }
+
+  &__link {
+    width: 100%;
+  }
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    &-subtitle {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: auto;
+      padding-bottom: 0.5rem;
+    }
+    &-img {
+      @include fadeIn;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    background: transparent;
+    font-family: $font-main;
+    font-style: italic;
+    font-size: 2rem;
+  }
+}
+
+.copenhagen {
+  .story__link {
+    background: black;
+    height: 95%;
+  }
+  .story__inner {
+    color: white;
+    &-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.heading-xl {
+  font-size: 8em;
+  text-transform: uppercase;
+  font-weight: 600;
+  @include respond(mobile) {
+    font-size: 4rem;
   }
 }

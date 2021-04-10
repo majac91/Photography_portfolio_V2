@@ -1,11 +1,17 @@
 import React, { useEffect } from "react";
 import Reveal from "react-reveal/Fade";
+
 import img5 from "../../images/story1/DSC_0390.jpg";
 import img6 from "../../images/story1/DSC_0393.jpg";
 import img3 from "../../images/story1/DSC_0408.jpg";
 import img4 from "../../images/story1/DSC_0410.jpg";
 import img1 from "../../images/story1/DSC_0414.jpg";
 import img2 from "../../images/story1/DSC_0463.jpg";
+import img7 from "../../images/story1/DSC_0379.jpg";
+import img8 from "../../images/story1/DSC_0381.jpg";
+import img9 from "../../images/story1/DSC_0474.jpg";
+import img10 from "../../images/story1/DSC_0465.jpg";
+import img11 from "../../images/story1/DSC_0448.jpg";
 
 const Story1 = ({ setContainerClass }) => {
   useEffect(() => {
@@ -25,26 +31,54 @@ const Story1 = ({ setContainerClass }) => {
         <Reveal effect="fadeInUp">
           <img className={"story1__img story1__img-img1"} src={img1}></img>
         </Reveal>
-        <div className="d-flex">
+
+        <div className="d-flex center-x space-xl">
+          <Reveal effect="fadeInUp">
+            <img className={"story1__img story1__img-img10"} src={img10}></img>
+          </Reveal>
+          <Reveal effect="fadeInUp">
+            <img className={"story1__img story1__img-img11"} src={img11}></img>
+          </Reveal>
+        </div>
+
+        <div className="d-flex ">
           <Reveal effect="fadeInUp">
             <img className={"story1__img story1__img-img2"} src={img2}></img>
           </Reveal>
         </div>
 
-        <div className="d-flex center-x">
+        <div className="story1__masonary center-x ">
+          <div className="d-flex col" style={{ flexGrow: "0" }}>
+            <Reveal effect="fadeInUp">
+              <img className={"story1__img story1__img-img3"} src={img3}></img>
+            </Reveal>
+            <Reveal effect="fadeInUp">
+              <img className={"story1__img story1__img-img7"} src={img7}></img>
+            </Reveal>
+          </div>
+
+          <div className="d-flex col" style={{ flexGrow: "0" }}>
+            <Reveal effect="fadeInUp">
+              <img className={"story1__img story1__img-img8"} src={img8}></img>
+            </Reveal>
+            <Reveal effect="fadeInUp">
+              <img className={"story1__img story1__img-img4"} src={img4}></img>
+            </Reveal>
+          </div>
+        </div>
+
+        <div className="d-flex flex-end space-xl">
           <Reveal effect="fadeInUp">
-            <img className={"story1__img story1__img-img3"} src={img3}></img>
-          </Reveal>
-          <Reveal effect="fadeInUp">
-            <img className={"story1__img story1__img-img4"} src={img4}></img>
+            <img className={"story1__img story1__img-img5"} src={img5}></img>
           </Reveal>
         </div>
-        <Reveal effect="fadeInUp">
-          <img className={"story1__img story1__img-img5"} src={img5}></img>
-        </Reveal>
+
         <div className="d-flex center-x">
           <Reveal effect="fadeInUp">
             <img className={"story1__img story1__img-img6"} src={img6}></img>
+          </Reveal>
+          <Reveal effect="fadeInUp">
+            <img className={"story1__img story1__img-img9"} src={img9}></img>
           </Reveal>
         </div>
       </main>

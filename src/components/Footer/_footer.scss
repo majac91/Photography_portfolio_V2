@@ -17,7 +17,7 @@
     // }
   }
   &__social-link {
-    margin-left: 2rem;
+    margin-left: 2rem 1rem;
   }
   @include respond(mobile) {
     flex-direction: column;

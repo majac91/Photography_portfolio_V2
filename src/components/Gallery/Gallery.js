@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import FsLightbox from "fslightbox-react";
+
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -17,6 +19,10 @@ import tumblrbtn from "../../icons/png/tumblr.png";
 
 export default function Gallery({ galleryList, onDeleteItem }) {
   const [activeItemId, setActiveItemId] = useState();
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 0,
+  });
 
   function handleActiveItem(id) {
     setActiveItemId(id);
@@ -26,10 +32,22 @@ export default function Gallery({ galleryList, onDeleteItem }) {
     setActiveItemId("");
   }
 
+  function openLightboxOnSlide(number) {
+    setLightboxController({
+      toggler: !lightboxController.toggler,
+      slide: number,
+    });
+  }
+
   return (
-    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 892: 3, 1515: 4 }}>
+    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 1515: 4 }}>
+      <FsLightbox
+        toggler={lightboxController.toggler}
+        sources={galleryList.map((el) => el.photo)}
+        slide={lightboxController.slide}
+      />
       <Masonry>
-        {galleryList.map((el) => {
+        {galleryList.map((el, key) => {
           return (
             <figure
               key={el.id}
@@ -37,18 +55,19 @@ export default function Gallery({ galleryList, onDeleteItem }) {
                 el.home ? "home" : "places"
               } ${el.id === activeItemId ? "edit__active" : ""}`}
             >
-              {/* TODO- separate and render edit/social buttons based on roles */}
               <img src={el.photo} alt={el.caption} className="gallery-img" />
+              <button
+                className="gallery__view-btn"
+                onClick={() => {
+                  openLightboxOnSlide(key + 1);
+                }}
+              >
+                view
+              </button>
               <div className="gallery-img__overlay">
-                {/* <input
-                  type="checkbox" //TODO - change icon
-                  className="overlay__checkbox overlay__btn"
-                  checked="checked"
-                /> */}
-
                 <FacebookShareButton url={el.photo}>
                   <img
-                    className="overlay__btn" //TODO - fix urls
+                    className="overlay__btn"
                     alt="share to facebook"
                     src={facebookbtn}
                   />
