@@ -32,6 +32,9 @@ body {
 .container {
   width: 95vw;
   margin: auto;
+  @include respond(mobile) {
+    width: 90vw;
+  }
 }
 
 li {

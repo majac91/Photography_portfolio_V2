@@ -51,6 +51,7 @@ export default function Gallery({ galleryList, onDeleteItem }) {
           return (
             <figure
               key={el.id}
+              tabIndex="0"
               className={`gallery-img__container ${
                 el.home ? "home" : "places"
               } ${el.id === activeItemId ? "edit__active" : ""}`}
@@ -61,9 +62,7 @@ export default function Gallery({ galleryList, onDeleteItem }) {
                 onClick={() => {
                   openLightboxOnSlide(key + 1);
                 }}
-              >
-                view
-              </button>
+              ></button>
               <div className="gallery-img__overlay">
                 <FacebookShareButton url={el.photo}>
                   <img
@@ -119,6 +118,7 @@ export default function Gallery({ galleryList, onDeleteItem }) {
               <button
                 onClick={() => handleActiveItem(el.id)}
                 type="button"
+                tabIndex="0"
                 className="gallery__edit-btn overlay__btn"
               >
                 <img

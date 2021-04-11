@@ -13,10 +13,10 @@
     display: block;
     opacity: 1;
     object-fit: cover;
-    @include respond(mobile) {
-      width: 90%;
-      margin: auto;
-    }
+    // @include respond(mobile) {
+    //   width: 90%;
+    //   margin: auto;
+    // }
   }
 }
 
@@ -26,6 +26,9 @@
   width: 100%;
   height: 100%;
   background: transparent;
+  @include respond(mobile) {
+    display: none;
+  }
 }
 
 //initially hidden
@@ -49,7 +52,8 @@
 }
 
 //displayed on img hover
-.gallery__view-btn:hover ~ .gallery__edit-btn {
+.gallery__view-btn:hover ~ .gallery__edit-btn,
+.gallery-img__container:focus .gallery__edit-btn {
   display: block;
   background-color: transparentize($color: white, $amount: 0.3);
   border-radius: 50%;
@@ -83,7 +87,7 @@
     background-color: transparentize($color: white, $amount: 0.3);
     opacity: 1;
     height: 5rem;
-    width: 35rem;
+    width: 100%;
     justify-content: flex-end;
     transform: translateY(0);
     transition: transform 0.5s ease;
@@ -138,7 +142,8 @@
 }
 
 .edit__active .gallery__edit-btn,
-.edit__active:hover .gallery__edit-btn {
+.edit__active:hover .gallery__edit-btn,
+.gallery-img__container:focus.edit__active .gallery__edit-btn {
   display: none;
 }
 

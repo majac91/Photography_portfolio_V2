@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   min-width: 33vw;
-  height: 70vh;
+  height: 80vh;
   @include respond(tablet) {
     flex-wrap: wrap;
     width: 100%;
@@ -51,7 +51,8 @@
     color: white;
     &-img {
       width: 100%;
-      height: auto;
+      height: 55%;
+      object-fit: cover;
     }
   }
 }

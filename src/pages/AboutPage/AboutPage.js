@@ -14,12 +14,49 @@ const AboutPage = ({ setContainerClass }) => {
   }, []);
   return (
     <>
-      <header className="header-about">
-        <h1 className="header-about__heading">About</h1>
+      <header className="about__header">
+        <h1 className="about__header-heading">About</h1>
       </header>
 
       <main>
-        <section className="about">
+        <section className="about about__mobile">
+          <div className="about__text">
+            <div className="about__text-outter">
+              <h2 className="about__text-outter__title">
+                "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit..." "
+              </h2>
+              <div className="about__text-inner row">
+                <div className="col">
+                  <p className="about__text-inner__p">
+                    Her approach is based upon the beauty of empty places and
+                    the stories that these spaces are telling us through
+                    objects, nature or the human relationship with them.
+                  </p>
+                  <p className="about__text-inner__p">
+                    She has a wide range of inspirations, from the street
+                    photographers to photojournalists or fashion photographers.
+                  </p>
+                </div>
+                <div className="col">
+                  <p className="about__text-inner__p">
+                    Her approach is based upon the beauty of empty places and
+                    the stories that these spaces are telling us through
+                    objects, nature or the human relationship with them.
+                  </p>
+                  <p className="about__text-inner__p">
+                    She has a wide range of inspirations, from the street
+                    photographers to photojournalists or fashion photographers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="about__img-wrapper">
+            <img className="about__img" src={about} />
+          </div>
+        </section>
+        <section className="about about__desktop">
           <div className="about__img-wrapper">
             <img className="about__img" src={about} />
           </div>
