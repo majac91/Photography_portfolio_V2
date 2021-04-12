@@ -32,6 +32,12 @@
       width: 100%;
       height: auto;
       margin: 1rem 0;
+      &-img6,
+      &-img9,
+      &-img10,
+      &-img11 {
+        width: 50%;
+      }
     }
 
     &-img1 {
@@ -42,7 +48,6 @@
     }
     &-img2 {
       margin-left: auto;
-      //   margin-right: 10%;
     }
   }
 

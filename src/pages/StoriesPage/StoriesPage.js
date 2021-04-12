@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import StoryCard from "../../components/StoryCard/StoryCard";
-import copenhagen from "../../images/DSC_0474.jpg";
+import botanisk from "../../images/DSC_0474.jpg";
+import mountains from "../../images/DSC_4233.jpg";
 
 const StoriesPage = ({ setContainerClass }) => {
   useEffect(() => {
@@ -19,29 +20,15 @@ const StoriesPage = ({ setContainerClass }) => {
       </header>
       <main className="container">
         <section className="stories__main">
-          <div className="col">
-            <div className="stories__card row">
-              <StoryCard
-                className="copenhagen"
-                src={copenhagen}
-                h1={"Copenhagen"}
-              />
+          <div className="row container">
+            <div className="stories__card col">
+              <StoryCard className="story-card__1" src={botanisk} />
             </div>
-            <div className="stories__card row">
-              <StoryCard className="" src={copenhagen} h1={"Copenhagen"} />
+            <div className="stories__card col">
+              <StoryCard className="story-card__2" src={mountains} />
             </div>
-          </div>
-          <div className="col">
-            <div className="stories__card row">
-              <StoryCard className="" src={copenhagen} h1={"Copenhagen"} />
-            </div>
-            <div className="stories__card row">
-              <StoryCard className="" src={copenhagen} h1={"Copenhagen"} />
-            </div>
-          </div>
-          <div className="col">
-            <div className="stories__card row">
-              <StoryCard className="" src={copenhagen} h1={"Copenhagen"} />
+            <div className="stories__card col">
+              <StoryCard className="story-card__3" />
             </div>
           </div>
         </section>

@@ -26,7 +26,7 @@ function App() {
           <Route exact path="/stories">
             <StoriesPage setContainerClass={setContainerClass} />
           </Route>
-          <Route exact path="/copenhagen">
+          <Route exact path="/botanisk">
             <StoryPage1 setContainerClass={setContainerClass} />
           </Route>
         </Switch>

@@ -40,12 +40,11 @@
     }
   }
   &__card {
-    max-width: 90%;
+    width: 30%;
     max-height: auto;
     display: flex;
     justify-content: space-between;
-    // margin: auto;
-    margin: 3rem;
+    margin: 1rem;
     @include respond(mobile) {
       width: 100%;
       margin: 0;
@@ -64,7 +63,6 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  min-width: 33vw;
   height: 70vh;
   @include respond(tablet) {
     flex-wrap: wrap;
