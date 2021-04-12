@@ -20,7 +20,7 @@
   justify-content: flex-end;
   @include fadeUp;
   @include respond(mobile) {
-    height: 40vh;
+    height: 100%;
     @include container-mobile;
     justify-content: initial;
   }
