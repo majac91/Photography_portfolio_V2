@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import StoryCard from "../../components/StoryCard/StoryCard";
-import botanisk from "../../images/DSC_0474.jpg";
+import botanisk from "../../images//story1/DSC_0390.jpg";
 import mountains from "../../images/DSC_4233.jpg";
 
 const StoriesPage = ({ setContainerClass }) => {
@@ -21,13 +21,21 @@ const StoriesPage = ({ setContainerClass }) => {
       <main className="container">
         <section className="stories__main">
           <div className="row container">
-            <div className="stories__card col">
-              <StoryCard className="story-card__1" src={botanisk} />
+            <div className="stories__card-outter col">
+              <StoryCard
+                className="story-card__1"
+                src={botanisk}
+                url="botanisk"
+              />
             </div>
-            <div className="stories__card col">
-              <StoryCard className="story-card__2" src={mountains} />
+            <div className="stories__card-outter col">
+              <StoryCard
+                className="story-card__2"
+                src={mountains}
+                url="where-no-words-are-needed"
+              />
             </div>
-            <div className="stories__card col">
+            <div className="stories__card-outter col">
               <StoryCard className="story-card__3" />
             </div>
           </div>

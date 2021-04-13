@@ -9,10 +9,12 @@
     flex-wrap: wrap;
     width: 100%;
     margin: 3rem 0;
+    min-height: 70vh;
   }
   @include respond(tablet) {
     flex-wrap: wrap;
     width: 100%;
+    min-height: 70vh;
   }
 
   &__link {
@@ -80,11 +82,13 @@
 }
 
 .story-card__3 {
+  @include respond(mobile) {
+    height: 100%;
+  }
   &__link {
     background: white;
   }
   &__inner {
-    // color: white;
     padding: 0;
     &-img {
       width: 100%;
@@ -92,6 +96,29 @@
     }
     &-subtitle {
       padding: 2rem;
+    }
+    &-title {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      text-align: center;
+      &__span:nth-of-type(1)::after {
+        content: "";
+        display: block;
+        background: url("../../images/D236F721-08D3-4592-B315-408D432153B7.jpg");
+        background-size: cover;
+        height: 350px;
+        width: 250px;
+        margin: 5rem auto;
+        @include respond(mobile) {
+          height: 300px;
+          width: 200px;
+          margin: 1rem auto;
+        }
+      }
     }
   }
 }

@@ -1,58 +1,95 @@
 .add-photo-form {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 80%;
+    margin: auto;
+  }
   &--closed {
-    // visibility: hidden;
     height: 0;
     width: 0;
     display: none;
   }
   &--open {
-    // visibility: visible;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: darken($color: $grey, $amount: 5%);
     z-index: 1000;
-    font-size: 1.9rem;
     position: fixed;
     top: 20vh;
     bottom: 20vh;
     left: 30vw;
     right: 30vw;
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: 1.9rem;
+    @include respond(mobile) {
+      width: 90vw;
+      top: 10vh;
+      bottom: 10vh;
+      left: 5vw;
+      right: 5vw;
+    }
+    @include respond(tablet) {
+      width: 80vw;
+      top: 20vh;
+      bottom: 20vh;
+      left: 10vw;
+      right: 10vw;
+    }
+
     .form__input {
       border: none;
       padding: 0.5rem;
+      width: 70%;
+      margin: auto;
     }
     .form__input-img {
       width: 20rem;
+      opacity: 0;
+      &-label {
+        &:after {
+          content: "select file";
+          display: block;
+          text-transform: lowercase;
+          font-size: 1.5rem;
+          padding: 0.5rem 1.5rem;
+          border: 2px solid darken($color: $grey, $amount: 10%);
+          cursor: pointer;
+        }
+      }
+      &-file {
+        font-size: 1.2rem;
+        padding-top: 1rem;
+      }
     }
+
     .form__label,
     .form__radio-btns,
-    .form__submit-btn {
+    .form__submit-btn,
+    .form__input-img-label::after {
       margin-top: 2.5rem;
       margin-bottom: 0.5rem;
+      text-align: center;
     }
     .form__submit-btn {
       text-transform: uppercase;
-      font-weight: 500;
       padding: 1rem 2.5rem;
       font-size: 1.5rem;
       background: darken($color: $grey, $amount: 10%);
     }
+    .form__radio-btn {
+      margin: 1rem;
+    }
     .form__close-btn {
       background: darken($color: $grey, $amount: 5%);
+      margin-left: auto;
     }
     .form__close-btn > img {
-      position: relative;
-      left: 20rem;
-      bottom: 38rem;
       width: 2rem;
       height: 2rem;
     }
   }
 }
-
-// Gallery

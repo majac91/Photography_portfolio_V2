@@ -1,13 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Story = ({ className, src }) => {
+const Story = ({ className, src, url }) => {
   return (
     <div className={`story-card ${className}`}>
-      <Link
-        to={`/${className}`}
-        className={`story-card__link ${className}__link`}
-      >
+      <Link to={`/${url}`} className={`story-card__link ${className}__link`}>
         {className === "story-card__1" && (
           <div className={`story-card__inner ${className}__inner`} src={src}>
             <h2
@@ -49,9 +46,12 @@ const Story = ({ className, src }) => {
         {className === "story-card__3" && (
           <div className={`story-card__inner ${className}__inner`} src={src}>
             <h2 className={`story-card__inner-title ${className}__inner-title`}>
-              <span className="heading-xl">In real</span>
-              <br />
-              <span className="heading-xl">life</span>
+              <span className={` ${className}__inner-title__span heading-xl`}>
+                In real
+              </span>
+              <span className={` ${className}__inner-title__span heading-xl`}>
+                life
+              </span>
             </h2>
             <div
               className={`story-card__inner-subtitle ${className}__inner-subtitle`}

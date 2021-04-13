@@ -87,7 +87,7 @@ button {
 }
 
 .heading-xl {
-  font-size: 8em;
+  font-size: 6rem;
   text-transform: uppercase;
   font-weight: 600;
   @include respond(mobile) {
@@ -111,7 +111,6 @@ button {
     transform: translateY(1rem);
   }
   100% {
-    // opacity: 1;
     transform: translateY(0);
   }
   0% {

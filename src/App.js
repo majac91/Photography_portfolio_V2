@@ -8,6 +8,7 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import MainPage from "./pages/MainPage/MainPage";
 import StoriesPage from "./pages/StoriesPage/StoriesPage";
 import StoryPage1 from "./pages/StoryPage1/Story1";
+import StoryPage2 from "./pages/StoryPage2/Story2";
 
 function App() {
   const [containerClass, setContainerClass] = useState(null);
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route exact path="/botanisk">
             <StoryPage1 setContainerClass={setContainerClass} />
+          </Route>
+          <Route exact path="/where-no-words-are-needed">
+            <StoryPage2 setContainerClass={setContainerClass} />
           </Route>
         </Switch>
 
