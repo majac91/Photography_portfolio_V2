@@ -39,7 +39,7 @@ const Story = ({ className, src, url }) => {
               className={`story-card__inner-subtitle ${className}__inner-subtitle`}
             >
               <h3>3 mountains</h3>
-              <h3>Serbia</h3>
+              <h3>2 countries</h3>
             </div>
           </div>
         )}

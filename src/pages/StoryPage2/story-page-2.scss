@@ -1,0 +1,93 @@
+.story2 {
+  background: #191919;
+  height: 100%;
+  font-family: $font-main;
+  &__heading {
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include fadeUp;
+
+    &-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      position: relative;
+      top: -25rem;
+      z-index: -100;
+      font-weight: 600;
+      &__text {
+        margin-top: auto;
+      }
+      @include respond(mobile) {
+        display: block;
+      }
+    }
+    &-title {
+      font-size: 10rem;
+      margin-top: 15rem;
+      @include respond(mobile) {
+        font-size: 5rem;
+      }
+    }
+    &-subtitle {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      text-align: left;
+    }
+    &-p {
+      font-size: 2rem;
+      padding-top: 2rem;
+      text-align: left;
+    }
+  }
+
+  &__img {
+    width: auto;
+    max-height: 100vh;
+    margin: 3rem;
+    font-size: 10rem;
+
+    @include respond(mobile) {
+      width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      &-img6,
+      &-img9,
+      &-img10,
+      &-img11 {
+        width: 50%;
+      }
+    }
+
+    &-img1 {
+      height: 90vh;
+      margin-top: auto;
+      margin-bottom: 0;
+      @include respond(mobile) {
+        height: auto;
+      }
+    }
+    &-img2 {
+      margin-left: auto;
+    }
+  }
+
+  &__masonary {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    @include respond(mobile) {
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+    }
+  }
+}
