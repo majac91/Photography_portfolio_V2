@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 
-export function useElementOnScreen(ref) {
+export function useInView(ref) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
-    const options = { treshold: 0 };
+    const options = { tresholds: 1 };
 
     const callback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setIsIntersecting(true);
+        } else {
+          setIsIntersecting(false);
         }
       });
     };

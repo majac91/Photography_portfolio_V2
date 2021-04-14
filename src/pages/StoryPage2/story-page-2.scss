@@ -1,7 +1,12 @@
 .story2 {
-  background: #191919;
   height: 100%;
   font-family: $font-main;
+  background-color: #191919;
+  transition: background-color 1s ease;
+  &.section2__in-view {
+    background-color: #1f292d;
+  }
+
   &__heading {
     height: 100%;
     width: 80%;
@@ -74,7 +79,8 @@
         height: auto;
       }
     }
-    &-img2 {
+    &-img2,
+    &-img16 {
       margin-left: auto;
     }
   }
@@ -89,5 +95,16 @@
       flex-basis: 100%;
       flex: 1;
     }
+  }
+
+  &__section-3 {
+    background-color: transparent;
+    transition: background-color 1s ease;
+  }
+  &__section-3.inView {
+    background-color: #3e4b45;
+  }
+  &__section-2 {
+    background-color: transparent;
   }
 }
