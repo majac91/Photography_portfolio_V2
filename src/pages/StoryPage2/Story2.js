@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Reveal from "react-reveal/Fade";
 import { useInView } from "../../hooks/useInView";
+import StoryLink from "../../components/StoryLink/StoryLink";
 //header
 import img1 from "../../images/story2/DSC_4212.jpg";
 
@@ -14,7 +15,7 @@ import img2 from "../../images/story2/DSC_0054.jpg";
 import img3 from "../../images/story2/DSC_0055.jpg";
 import img4 from "../../images/story2/DSC_0083.jpg";
 import img5 from "../../images/story2/DSC_0084.jpg";
-import img6 from "../../images/story2/DSC_0089.jpg";
+// import img6 from "../../images/story2/DSC_0089.jpg";
 import img7 from "../../images/story2/DSC_0094.jpg";
 import img8 from "../../images/story2/DSC_0107.jpg";
 import img9 from "../../images/story2/DSC_0126.jpg";
@@ -31,15 +32,12 @@ import img20 from "../../images/story2/DSC_1510.jpg";
 
 const Story2 = ({ setContainerClass }) => {
   useEffect(() => {
-    setContainerClass("story1Page");
+    setContainerClass("story2Page");
   }, []);
 
   const section2Ref = useRef();
   const section3Ref = useRef();
   const section2InView = useInView(section2Ref);
-  const section3InView = useInView(section3Ref);
-
-  const cx = require("classnames");
 
   return (
     <div className={`story2 ${section2InView ? "section2__in-view" : ""}`}>
@@ -48,11 +46,14 @@ const Story2 = ({ setContainerClass }) => {
           WHERE NO WORDS ARE NEEDED. PLACES TO TOUCH THE SKY.
         </h1>
         <div className="story2__heading-inner">
-          <Reveal effect="fadeInUp">
-            <img className={"story2__img story2__img-img1"} src={img1} />
-          </Reveal>
+          <div>
+            <Reveal effect="fadeInUp">
+              <img className={"story2__img story2__img-img1"} src={img1} />
+              <p className={"story2__heading-subheading"}>Kopaonik, Serbia</p>
+            </Reveal>
+          </div>
           <div className="story2__heading-inner__text">
-            <h2 className="story2__heading-subtitle">
+            <h2 className="story2__heading-subheading">
               Mountain peaks of Serbia | Landscapes
             </h2>
             <p className="story2__heading-p">
@@ -95,6 +96,13 @@ const Story2 = ({ setContainerClass }) => {
 
         {/* SECTION 2 */}
         <section ref={section2Ref} className="story2__section-2">
+          <p className="story2__divider d-flex space-between container">
+            <span>02.</span>
+            <span style={{ marginRight: "auto", marginLeft: "13rem" }}>
+              Zlatibot, Serbia
+            </span>
+            <span>December 2017</span>
+          </p>
           <div className="d-flex center-x space-xl">
             <Reveal effect="fadeInUp">
               <img className={"story2__img story1__img-img10"} src={img10} />
@@ -104,50 +112,56 @@ const Story2 = ({ setContainerClass }) => {
             </Reveal>
           </div>
 
-          <div className="d-flex">
-            <Reveal effect="fadeInUp">
-              <img className={"story1__img story1__img-img2"} src={img2} />
-            </Reveal>
-          </div>
-
-          <div className="story2__masonary center-x ">
-            <div className="d-flex col" style={{ flexGrow: "0" }}>
-              <Reveal effect="fadeInUp">
-                <img className={"story1__img story1__img-img3"} src={img3} />
-              </Reveal>
-              <Reveal effect="fadeInUp">
-                <img className={"story1__img story1__img-img7"} src={img7} />
-              </Reveal>
-            </div>
-
-            <div className="d-flex col" style={{ flexGrow: "0" }}>
-              <Reveal effect="fadeInUp">
-                <img className={"story1__img story2__img-img8"} src={img8} />
-              </Reveal>
+          <div className="d-flex flex-end">
+            <div>
               <Reveal effect="fadeInUp">
                 <img className={"story1__img story2__img-img4"} src={img4} />
               </Reveal>
             </div>
+            <div>
+              <Reveal effect="fadeInUp">
+                <img className={"story1__img story1__img-img2"} src={img2} />
+              </Reveal>
+            </div>
           </div>
 
-          <div className="d-flex flex-end space-xl">
-            <Reveal effect="fadeInUp">
-              <img className={"story1__img story2__img-img5"} src={img5} />
-            </Reveal>
-          </div>
-
-          <div className="d-flex center-x">
-            <Reveal effect="fadeInUp">
-              <img className={"story2__img story2__img-img6"} src={img6} />
-            </Reveal>
+          <div className="d-flex center-x l">
             <Reveal effect="fadeInUp">
               <img className={"story2__img story2__img-img9"} src={img9} />
             </Reveal>
+          </div>
+
+          <div className="story2__masonary center-x space-xl">
+            <div className="d-flex col space-xl" style={{ flexGrow: "0" }}>
+              <Reveal effect="fadeInUp">
+                <img className={"story1__img story1__img-img3 "} src={img3} />
+              </Reveal>
+
+              <Reveal effect="fadeInUp">
+                <img className={"story2__img story2__img-img5 "} src={img5} />
+              </Reveal>
+            </div>
+
+            <div className="d-flex col space-xl" style={{ flexGrow: "0" }}>
+              <Reveal effect="fadeInUp">
+                <img className={"story1__img story1__img-img7"} src={img7} />
+              </Reveal>
+              <Reveal effect="fadeInUp">
+                <img className={"story1__img story2__img-img8"} src={img8} />
+              </Reveal>
+            </div>
           </div>
         </section>
 
         {/* SECTION 3 */}
         <section ref={section3Ref} className="story2__section-3">
+          <p className="story2__divider d-flex space-between container">
+            <span>03.</span>
+            <span style={{ marginRight: "auto", marginLeft: "13rem" }}>
+              Rila, Bulgaria
+            </span>
+            <span>May 2016</span>
+          </p>
           <div className="d-flex space-xl">
             <Reveal effect="fadeInUp">
               <img className={"story2__img story2__img-img17"} src={img17} />
@@ -160,7 +174,10 @@ const Story2 = ({ setContainerClass }) => {
           </div>
 
           <Reveal effect="fadeInUp">
-            <img className={"story2__img story2__img-img17"} src={img15} />
+            <img
+              className={"story2__img story2__img-img17 space-xl"}
+              src={img15}
+            />
           </Reveal>
           <div className="d-flex center-x">
             <Reveal effect="fadeInUp">
@@ -171,6 +188,7 @@ const Story2 = ({ setContainerClass }) => {
             </Reveal>
           </div>
         </section>
+        <StoryLink path="/in-real-life" nextStory="In real life" />
       </main>
     </div>
   );

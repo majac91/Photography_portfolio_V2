@@ -7,8 +7,8 @@ import React, {
   useMemo,
 } from "react";
 import firstSlide from "../../images/photo0.jpg";
-import secondSlide from "../../images/photo1.jpg";
-import thirdSlide from "../../images/photo8.jpg";
+import secondSlide from "../../images/photo2.jpg";
+import thirdSlide from "../../images/story2/DSC_0429.jpg";
 import fourthSlide from "../../images/photo25.jpg";
 
 export default function Slider() {

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Reveal from "react-reveal/Fade";
-
+import StoryLink from "../../components/StoryLink/StoryLink";
 import img5 from "../../images/story1/DSC_0390.jpg";
 import img6 from "../../images/story1/DSC_0393.jpg";
 import img3 from "../../images/story1/DSC_0408.jpg";
@@ -81,6 +81,11 @@ const Story1 = ({ setContainerClass }) => {
             <img className={"story1__img story1__img-img9"} src={img9}></img>
           </Reveal>
         </div>
+
+        <StoryLink
+          path="/where-no-words-are-needed"
+          nextStory="Where no words are needed"
+        />
       </main>
     </div>
   );

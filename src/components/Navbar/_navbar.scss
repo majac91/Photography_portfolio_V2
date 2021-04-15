@@ -44,10 +44,6 @@
   }
   &__link {
     font-weight: 800;
-
-    // @include respond(mobile) {
-    //   font-weight: 600;
-    // }
   }
   &--shrink {
     font-size: 1.2rem;
@@ -55,7 +51,8 @@
   }
 }
 
-.story1Page {
+.story1Page,
+.story2Page {
   color: white;
 
   .navbar__link {

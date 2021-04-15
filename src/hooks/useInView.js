@@ -4,7 +4,7 @@ export function useInView(ref) {
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
-    const options = { tresholds: 1 };
+    const options = { treshold: 1 };
 
     const callback = (entries) => {
       entries.forEach((entry) => {
