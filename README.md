@@ -15,7 +15,7 @@ npm install
 Run the project
 
 ```
-npm run dev
+npm start
 ```
 
 ## Current stage

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import StoryLink from "../../components/StoryLink/StoryLink";
 
 const Story = ({ className, src, url }) => {
   return (
@@ -62,7 +63,9 @@ const Story = ({ className, src, url }) => {
           </div>
         )}
       </Link>
-      <button className="story-card__btn">View more</button>
+      <Link to={`/${url}`} className="story-card__btn">
+        View more
+      </Link>
     </div>
   );
 };

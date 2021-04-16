@@ -81,7 +81,7 @@ const Story2 = ({ setContainerClass }) => {
         {/* SECTION 1 */}
         <section className="story2__section-1">
           <Reveal effect="fadeInUp">
-            <img className={"story2__img story12__img-img12"} src={img12}></img>
+            <img className={"story2__img story2__img-img12"} src={img12}></img>
           </Reveal>
 
           <div className="d-flex center-x space-xl">
@@ -105,27 +105,27 @@ const Story2 = ({ setContainerClass }) => {
           </p>
           <div className="d-flex center-x space-xl">
             <Reveal effect="fadeInUp">
-              <img className={"story2__img story1__img-img10"} src={img10} />
+              <img className={"story2__img story2__img-img10"} src={img10} />
             </Reveal>
             <Reveal effect="fadeInUp">
-              <img className={"story2__img story1__img-img11"} src={img11} />
+              <img className={"story2__img story2__img-img11"} src={img11} />
             </Reveal>
           </div>
 
           <div className="d-flex flex-end">
             <div>
               <Reveal effect="fadeInUp">
-                <img className={"story1__img story2__img-img4"} src={img4} />
+                <img className={"story2__img story2__img-img4"} src={img4} />
               </Reveal>
             </div>
             <div>
               <Reveal effect="fadeInUp">
-                <img className={"story1__img story1__img-img2"} src={img2} />
+                <img className={"story2__img story2__img-img2"} src={img2} />
               </Reveal>
             </div>
           </div>
 
-          <div className="d-flex center-x l">
+          <div className="d-flex center-x space-xl">
             <Reveal effect="fadeInUp">
               <img className={"story2__img story2__img-img9"} src={img9} />
             </Reveal>
@@ -134,7 +134,7 @@ const Story2 = ({ setContainerClass }) => {
           <div className="story2__masonary center-x space-xl">
             <div className="d-flex col space-xl" style={{ flexGrow: "0" }}>
               <Reveal effect="fadeInUp">
-                <img className={"story1__img story1__img-img3 "} src={img3} />
+                <img className={"story2__img story2__img-img3 "} src={img3} />
               </Reveal>
 
               <Reveal effect="fadeInUp">
@@ -144,10 +144,10 @@ const Story2 = ({ setContainerClass }) => {
 
             <div className="d-flex col space-xl" style={{ flexGrow: "0" }}>
               <Reveal effect="fadeInUp">
-                <img className={"story1__img story1__img-img7"} src={img7} />
+                <img className={"story2__img story2__img-img7"} src={img7} />
               </Reveal>
               <Reveal effect="fadeInUp">
-                <img className={"story1__img story2__img-img8"} src={img8} />
+                <img className={"story2__img story2__img-img8"} src={img8} />
               </Reveal>
             </div>
           </div>
