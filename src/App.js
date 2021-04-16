@@ -2,6 +2,7 @@ import "./App.scss";
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import AboutPage from "./pages/AboutPage/AboutPage";
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className={containerClass}>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Switch>
           <Route exact path="/">
