@@ -29,7 +29,6 @@
     align-items: center;
     @include scale;
     @include respond(mobile) {
-      // background: url("../../images/about.jpg");
       background-position: center;
     }
     &-heading {

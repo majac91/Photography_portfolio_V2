@@ -112,7 +112,7 @@ const Story2 = ({ setContainerClass }) => {
             </Reveal>
           </div>
 
-          <div className="d-flex flex-end">
+          <div className="d-flex flex-end flex-wrap">
             <div>
               <Reveal effect="fadeInUp">
                 <img className={"story2__img story2__img-img4"} src={img4} />
