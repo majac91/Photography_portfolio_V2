@@ -9,7 +9,10 @@ export default function Form({ isFormOpen, onCloseForm, onSubmitForm }) {
   const [location, setLocation] = useState();
   const fileInput = createRef();
 
-  const handleFileInput = (e) => setFileName(e.target.files[0].name);
+  const handleFileInput = (e) => {
+    let shortenedFileName = `${e.target.files[0].name.slice(0, 10)}...`;
+    setFileName(shortenedFileName);
+  };
   const handleCaptionInput = (e) => setCaption(e.target.value);
   const handleDateInput = (e) => setDate(e.target.value);
 

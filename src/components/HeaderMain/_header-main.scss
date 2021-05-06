@@ -20,8 +20,8 @@
   justify-content: flex-end;
   @include fadeUp;
   @include respond(mobile) {
-    height: 100%;
-    @include container-mobile;
+    height: 50vh;
+    @include container;
     justify-content: initial;
   }
   &__subtitle {
@@ -52,7 +52,7 @@
     padding: 2rem 0;
     @include respond(mobile) {
       font-size: 1.6rem;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
     }
   }
   &__scroll-btn {

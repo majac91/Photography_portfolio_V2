@@ -55,9 +55,10 @@
           display: block;
           text-transform: lowercase;
           font-size: 1.5rem;
-          padding: 0.5rem 1.5rem;
-          border: 2px solid darken($color: $grey, $amount: 10%);
+          padding: 0.5rem 2rem;
           cursor: pointer;
+          background: darken($color: $grey, $amount: 10%);
+          font-weight: 600;
         }
       }
       &-file {
@@ -79,9 +80,13 @@
       padding: 1rem 2.5rem;
       font-size: 1.5rem;
       background: darken($color: $grey, $amount: 10%);
+      font-weight: 600;
     }
     .form__radio-btn {
       margin: 1rem;
+      &:checked {
+        color: red;
+      }
     }
     .form__close-btn {
       background: darken($color: $grey, $amount: 5%);

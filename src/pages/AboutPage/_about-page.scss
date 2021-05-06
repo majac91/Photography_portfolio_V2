@@ -111,8 +111,9 @@
       font-size: 2.5rem;
       font-style: italic;
       padding-top: 2rem;
+      @include respond(mobile) {
+        font-size: 2rem;
+      }
     }
   }
 }
-
-//section more authors
