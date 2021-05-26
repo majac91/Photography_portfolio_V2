@@ -29,14 +29,14 @@ const StoriesPage = ({ setContainerClass }) => {
               />
             </div>
             <div className="stories__card-outter col">
+              <StoryCard url="in-real-life" className="story-card__3" />
+            </div>
+            <div className="stories__card-outter col">
               <StoryCard
                 className="story-card__2"
                 src={mountains}
                 url="where-no-words-are-needed"
               />
-            </div>
-            <div className="stories__card-outter col">
-              <StoryCard className="story-card__3" />
             </div>
           </div>
         </section>

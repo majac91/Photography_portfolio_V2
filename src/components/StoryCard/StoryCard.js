@@ -64,7 +64,7 @@ const Story = ({ className, src, url }) => {
         )}
       </Link>
       <Link to={`/${url}`} className="story-card__btn">
-        View more
+        View story
       </Link>
     </div>
   );
