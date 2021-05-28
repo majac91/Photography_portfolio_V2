@@ -3,27 +3,22 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 100%;
-  width: 100%;
+  flex: 1;
   @include respond(mobile) {
     flex-wrap: wrap;
-    width: 100%;
     margin-bottom: 3rem;
-    min-height: 70vh;
   }
   @include respond(tablet) {
     flex-wrap: wrap;
-    width: 100%;
-    min-height: 70vh;
   }
 
   &__link {
     width: 100%;
-    height: 95%;
+    flex: 1;
     margin-bottom: 5rem;
   }
   &__inner {
-    height: 70vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,6 +34,7 @@
     &-img {
       @include fadeIn;
       object-fit: cover;
+      object-position: bottom;
     }
   }
 
@@ -70,14 +66,25 @@
     background: #292229;
   }
   &__inner {
+    position: relative;
     color: white;
     padding: 0;
     &-img {
       width: 100%;
-      max-height: 80%;
+      max-height: 50vh;
+      position: absolute;
+      top: 0;
     }
-    &-subtitle {
-      padding: 2rem;
+    &-title {
+      margin-bottom: 4rem;
+    }
+    &-heading {
+      width: 90%;
+      position: absolute;
+      bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
@@ -111,12 +118,9 @@
         display: block;
         background: url("../../images/D236F721-08D3-4592-B315-408D432153B7.jpg");
         background-size: cover;
-        height: 350px;
-        width: 250px;
-        margin: 5rem auto;
+        height: 400px;
         @include respond(mobile) {
-          height: 300px;
-          width: 200px;
+          height: 200px;
           margin: 1rem auto;
         }
       }

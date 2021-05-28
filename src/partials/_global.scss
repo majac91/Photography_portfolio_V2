@@ -101,6 +101,9 @@ button {
   @include respond(mobile) {
     font-size: 4rem;
   }
+  @include respond(tablet) {
+    font-size: 5rem;
+  }
 }
 
 //animations

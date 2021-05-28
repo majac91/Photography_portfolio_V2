@@ -33,14 +33,16 @@ const Story = ({ className, src, url }) => {
               src={src}
               alt="mountain landscape in dusk"
             />
-            <h2 className={`story-card__inner-title ${className}__inner-title`}>
-              Where no words are needed
-            </h2>
-            <div
-              className={`story-card__inner-subtitle ${className}__inner-subtitle`}
-            >
-              <h3>3 mountains</h3>
-              <h3>2 countries</h3>
+            <div className={`${className}__inner-heading`}>
+              <h2
+                className={`story-card__inner-title ${className}__inner-title`}
+              >
+                Where no words are needed
+              </h2>
+              <div className="story-card__inner-subtitle ">
+                <h3>3 mountains</h3>
+                <h3>2 countries</h3>
+              </div>
             </div>
           </div>
         )}
@@ -56,10 +58,7 @@ const Story = ({ className, src, url }) => {
             </h2>
             <div
               className={`story-card__inner-subtitle ${className}__inner-subtitle`}
-            >
-              <h3>3 mountains</h3>
-              <h3>Serbia</h3>
-            </div>
+            ></div>
           </div>
         )}
       </Link>
