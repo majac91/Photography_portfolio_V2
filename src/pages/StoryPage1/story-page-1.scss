@@ -2,6 +2,7 @@
   background: black;
   height: 100%;
   font-family: $font-main;
+
   &__heading {
     height: 50vh;
     display: flex;
@@ -15,6 +16,7 @@
     &-inner {
       margin: auto;
     }
+
     &-title {
       font-size: 10rem;
       @include respond(mobile) {
@@ -47,6 +49,7 @@
         height: auto;
       }
     }
+
     &-img2 {
       margin-left: auto;
     }
@@ -57,6 +60,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    
     @include respond(mobile) {
       flex-direction: column;
       flex-basis: 100%;

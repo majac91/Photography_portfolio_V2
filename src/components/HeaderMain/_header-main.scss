@@ -24,6 +24,7 @@
     @include container;
     justify-content: initial;
   }
+
   &__subtitle {
     animation: fadeUp 2s forwards;
     font-size: 2rem;
@@ -33,12 +34,14 @@
       padding-bottom: 1rem;
     }
   }
+
   &__title {
     font-size: 3.8rem;
     @include respond(mobile) {
       font-size: 2.5rem;
     }
   }
+
   &__name {
     font-style: italic;
     font-size: 3.5rem;
@@ -46,6 +49,7 @@
       font-size: 2.4rem;
     }
   }
+
   &__scroll-label {
     // arrow
     font-size: 2rem;
@@ -55,9 +59,11 @@
       padding: 1.5rem 0;
     }
   }
+
   &__scroll-btn {
     background: $grey;
   }
+  
   &__scroll-icon {
     animation: pulse 2s infinite;
   }

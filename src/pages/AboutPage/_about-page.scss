@@ -5,19 +5,24 @@
   align-items: center;
   height: 100%;
   flex-wrap: wrap;
+
   &__mobile {
     display: none;
     height: 100%;
   }
+
   @include respond(mobile) {
     flex-direction: column;
+
     &__mobile {
       display: block;
     }
+
     &__desktop {
       display: none;
     }
   }
+
   &__header {
     background: url("../../images/DSC_4212.jpg");
     background-size: cover;
@@ -31,6 +36,7 @@
     @include respond(mobile) {
       background-position: center;
     }
+
     &-heading {
       font-family: "IBM Plex Serif";
       color: white;
@@ -43,12 +49,14 @@
     flex: 1;
     height: 80vh;
   }
+
   &__img-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(25, 20, 15); //rgb(148, 162, 163)
   }
+
   &__img {
     width: 40rem;
     height: auto;
@@ -71,29 +79,34 @@
     height: 100%;
     width: 80%;
     margin: auto;
+
     &__title {
       width: 80%;
       margin: 0 auto;
       text-align: center;
       font-size: 2.5rem;
     }
+
     @include respond(mobile) {
       width: auto;
       font-size: 2rem;
     }
   }
+
   &-inner {
     margin: 3rem;
+
     &__p {
       margin: 0 2rem;
       padding-bottom: 2rem;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
   }
 }
 
 //section inspiration
 .inspiration {
+
   &__heading {
     height: 20vh;
     display: flex;
@@ -111,6 +124,7 @@
       font-size: 2.5rem;
       font-style: italic;
       padding-top: 2rem;
+
       @include respond(mobile) {
         font-size: 2rem;
       }

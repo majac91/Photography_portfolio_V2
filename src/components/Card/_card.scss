@@ -25,10 +25,12 @@
     flex-direction: column;
     padding-bottom: 0;
   }
+
   &__img-container,
   &__text {
     flex: 1;
   }
+
   &__text {
     height: 90%;
     display: flex;
@@ -42,6 +44,7 @@
       font-size: 1.5rem;
       font-weight: 600;
     }
+
     &-heading {
       font-size: 2.5rem;
       width: 50%;
@@ -49,6 +52,7 @@
       padding-top: 2rem;
     }
   }
+
   &__img {
     width: 100%;
     height: 90%;
@@ -57,16 +61,20 @@
       height: 100%;
     }
   }
+
   &__credits {
     display: block;
     font-size: 1.2rem;
+
     &-mobile {
       display: none;
     }
+
     @include respond(mobile) {
       &-mobile {
         display: block;
       }
+      
       &-desktop {
         display: none;
       }

@@ -8,11 +8,13 @@
     width: 80%;
     margin: auto;
   }
+
   &--closed {
     height: 0;
     width: 0;
     display: none;
   }
+
   &--open {
     display: flex;
     flex-direction: column;
@@ -25,6 +27,7 @@
     left: 30vw;
     right: 30vw;
     font-size: 1.9rem;
+
     @include respond(mobile) {
       width: 90vw;
       top: 10vh;
@@ -49,6 +52,7 @@
     .form__input-img {
       width: 20rem;
       opacity: 0;
+
       &-label {
         &:after {
           content: "select file";
@@ -61,6 +65,7 @@
           font-weight: 600;
         }
       }
+
       &-file {
         font-size: 1.2rem;
         padding-top: 1rem;
@@ -75,6 +80,7 @@
       margin-bottom: 0.5rem;
       text-align: center;
     }
+
     .form__submit-btn {
       text-transform: uppercase;
       padding: 1rem 2.5rem;
@@ -82,12 +88,14 @@
       background: darken($color: $grey, $amount: 10%);
       font-weight: 600;
     }
+
     .form__radio-btn {
       margin: 1rem;
       &:checked {
         color: red;
       }
     }
+    
     .form__close-btn {
       background: darken($color: $grey, $amount: 5%);
       margin-left: auto;

@@ -57,21 +57,17 @@ const Story2 = ({ setContainerClass }) => {
               Mountain peaks of Serbia | Landscapes
             </h2>
             <p className="story2__heading-p">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              “Climb the mountains and get their good tidings. Nature's peace will flow into you as sunshine flows into trees.”
             </p>
             <p className="story2__heading-p">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              Mountains brim with life. They are my rooting in the midst of change. 
+              Earth and sky, snow and wind, the crystal clear air that fills every cell.
+              Mountain slopes are where are I go for solitude and connection, pure awe and oblivion.
+              
             </p>
             <p className="story2__heading-p">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+              My camera was never left behind when on a hike or climb. How hard it was to think I'd ever miss capturing a moment of beauty.  
+              But the more time I sat staring at the shapes of the peaks in quiet, the more I stopped feeling the need to hold onto it.
             </p>
           </div>
         </div>

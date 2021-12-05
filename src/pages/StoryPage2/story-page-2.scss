@@ -44,6 +44,7 @@
         display: block;
       }
     }
+    
     &-title {
       font-size: 10rem;
       margin-top: 15rem;
@@ -51,12 +52,14 @@
         font-size: 4rem;
       }
     }
+
     &-subheading {
       text-transform: uppercase;
       font-size: 1.1rem;
       text-align: left;
       padding-top: 1rem;
     }
+
     &-p {
       font-size: 2rem;
       padding-top: 2rem;
@@ -130,6 +133,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    
     @include respond(mobile) {
       flex-direction: column;
       flex-basis: 100%;

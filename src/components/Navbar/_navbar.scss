@@ -23,12 +23,14 @@
       font-size: 1.8rem;
     }
   }
+
   &__item {
     margin: 0 2rem;
     @include respond(mobile) {
       margin: 0 1rem;
     }
   }
+
   &__link {
     font-weight: 800;
   }
@@ -36,6 +38,7 @@
   &__active {
     font-style: italic;
   }
+  
   &--shrink {
     font-size: 1.2rem;
     height: 8rem;

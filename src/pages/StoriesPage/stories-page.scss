@@ -14,31 +14,38 @@
       flex-direction: column;
       @include fadeUp;
     }
+
     &-title {
       font-size: 2rem;
     }
+
     &-subtitle {
       font-size: 2.5rem;
       font-style: italic;
       width: 30%;
       text-align: center;
       padding-top: 1.5rem;
+
       @include respond(mobile) {
         width: 90vw;
         font-size: 2rem;
       }
     }
   }
+
   &__main {
     height: 100%;
     margin: auto;
     display: flex;
+
     .row {
       height: 100%;
     }
+
     @include respond(mobile) {
       flex-direction: column;
     }
+
     @include respond(tablet) {
       flex-direction: column;
     }
@@ -51,11 +58,13 @@
     display: flex;
     justify-content: space-between;
     margin: 1rem;
+
     @include respond(mobile) {
       width: 100%;
       margin: 0;
     }
   }
+  
   &__main-footer {
     width: 100%;
     text-align: center;
