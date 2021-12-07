@@ -26,23 +26,24 @@ const AboutPage = ({ setContainerClass }) => {
                     <div className="about__text">
                         <div className="about__text-outter">
                             <h2 className="about__text-outter__title">
-                                Maja Cvetkovic is a software developer based in Serbia, exploring the world through the photographic lens.
+                                I'm Maja Cvetkovic, a a software developer based in Serbia, exploring the world through the photographic lens.
                             </h2>
                             <div className="about__text-inner row">
                                 <div className="col">
                                     <p className="about__text-inner__p">
-                                        Her first curiosity in photography was a desire to encapsulate a feeling. It grew into a love of photography as a medium
-                                        that allowed her to step outside her own perspective, and see the world in a new way.
+                                        My first curiosity in photography didn't take long to grow into a love of it as a medium
+                                        that allowed me to step outside my own perspective, and see the world in a new way.
                                     </p>
                                     <p className="about__text-inner__p">
-                                        As photography has become an increasingly important part of global culture, her interest in the meaning of photography and the purpose it serves in people’s lives has also grown.
+                                        As photography has become an increasingly important part of global culture, my interest in the meaning of photography and the purpose it serves in people’s lives has also grown.
+                                        This website was made as the means of documenting the daily living during the pandemic and keeping the focus on what matters most to me.
                                     </p>
                                 </div>
                                 <div className="col">
                                     <p className="about__text-inner__p">
-                                        Travelling has only reinforced her curiosity to explore new places. She is drawn to the relationship between architecture & nature through the contrast between light & darkness.</p>
+                                        Travelling has only reinforced my curiosity to explore new places. I'm is drawn to the relationship between architecture & nature through the contrast between light & darkness.</p>
                                     <p className="about__text-inner__p">
-                                        She has a wide range of inspirations, from the street photographers to photojournalists and fashion photographers.
+                                        I have a wide range of inspirations, from the street photographers to photojournalists and fashion photographers.
                                     </p>
                                 </div>
                             </div>

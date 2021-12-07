@@ -50,7 +50,7 @@ const MainPage = ({ setContainerClass }) => {
       let listItem = { caption, date, home, photo, id };
       retreivedList.push(listItem);
     }
-    setGalleryList(retreivedList);
+    setGalleryList(retreivedList.reverse());
   }
 
   //load list on page load

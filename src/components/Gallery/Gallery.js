@@ -54,15 +54,29 @@ export default function Gallery({ galleryList, onDeleteItem }) {
               tabIndex="0"
               className={`gallery-img__container ${
                 el.home ? "home" : "places"
-              } ${el.id === activeItemId ? "edit__active" : ""}`}
+                } ${el.id === activeItemId ? "edit__active" : ""}`}
             >
-              <img src={el.photo} alt={el.caption} className="gallery-img" />
-              <button
-                className="gallery__view-btn"
-                onClick={() => {
-                  openLightboxOnSlide(key + 1);
-                }}
-              ></button>
+              <div class='gallery-img__inner'>
+                <img src={el.photo} alt={el.caption} className="gallery-img" />
+                <button
+                  className="gallery__view-btn"
+                  onClick={() => {
+                    openLightboxOnSlide(key + 1);
+                  }}
+                ></button>
+                <button
+                  onClick={() => handleActiveItem(el.id)}
+                  type="button"
+                  tabIndex="0"
+                  className="gallery__edit-btn overlay__btn"
+                >
+                  <img
+                    alt="edit"
+                    className="gallery__edit-btn-img overlay__btn"
+                    src={editbtn}
+                  />
+                </button>
+              </div>
               <div className="gallery-img__overlay">
                 <FacebookShareButton url={el.photo}>
                   <img
@@ -115,18 +129,6 @@ export default function Gallery({ galleryList, onDeleteItem }) {
                   />
                 </button>
               </div>
-              <button
-                onClick={() => handleActiveItem(el.id)}
-                type="button"
-                tabIndex="0"
-                className="gallery__edit-btn overlay__btn"
-              >
-                <img
-                  alt="edit"
-                  className="gallery__edit-btn-img overlay__btn"
-                  src={editbtn}
-                />
-              </button>
               <figcaption className="caption__container">
                 <div className="caption__text">
                   <h2 className="img__caption">{el.caption}</h2>

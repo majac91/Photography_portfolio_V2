@@ -9,9 +9,9 @@ export default function Header() {
       </h1>
       <p className="heading__subtitle">Hey, welcome and take a look</p>
       <p className="heading__title">
-        This is a photographic journal of
-        <span className="heading__name"> Maja Cvetkovic</span>, an amateur
-        photographer based in Nis, Serbia.
+        This is a photographic quarantine journal of
+        <span className="heading__name"> Maja Cvetkovic</span>, a software
+        developer based in Nis, Serbia.
       </p>
       <label className="heading__scroll-label">Scroll down</label>
       <button className="heading__scroll-btn">

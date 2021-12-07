@@ -9,12 +9,15 @@
       width: auto;
     }
   }
-
   .gallery-img {
     width: 100%;
     display: block;
     opacity: 1;
     object-fit: cover;
+
+    &__inner {
+      position: relative;
+    }
   }
 }
 
@@ -35,21 +38,20 @@
   position: relative;
   height: 4rem;
   width: 4rem;
-  // top: -10.5rem;
-  // right: 1rem;
-  // float: right;
   position: absolute;
   bottom: 0;
   right: 20px;
   width: 50px;
   height: 50px;
   margin-top: auto;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
   transition: display 1s ease;
+
   &-img {
     height: 1.8rem;
     width: 1.8rem;
   }
+
   &:hover {
     display: block;
     background-color: transparentize($color: white, $amount: 0.3);
