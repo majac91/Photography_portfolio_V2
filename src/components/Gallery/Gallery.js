@@ -39,6 +39,8 @@ export default function Gallery({ galleryList, onDeleteItem }) {
     });
   }
 
+
+
   return (
     <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 1515: 4 }}>
       <FsLightbox
